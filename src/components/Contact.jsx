@@ -1,38 +1,75 @@
-import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone, FaMapMarkerAlt, FaWhatsapp, FaTiktok, FaEnvelope } from "react-icons/fa";
 
 function Contact() {
+
+  const phone1 = "+251913469555";
+  const phone2 = "+251913480555";
+
+  const whatsappLink = "https://wa.me/251913480555";
+  const tiktokLink = "https://www.tiktok.com/@abiy2424241";
+  const mapLink = "https://maps.app.goo.gl/2q9fRirAGKdxcgW49?g_st=atm";
+  const email = "info@abiyguesthouse.com";
+
   return (
     <section id="contact" className="py-24 bg-green-700 text-white">
 
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 text-center">
 
-        <h2 className="text-4xl font-bold text-center">
-          Contact Us
+        <h2 className="text-4xl font-bold mb-10">
+          Get in Touch
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 mt-14">
+        {/* Contact Buttons */}
+        <div className="grid md:grid-cols-2 gap-6 text-left">
 
-          <div>
-            <h3 className="font-bold text-2xl mb-6">
-              ABIY Guest House
-            </h3>
+          {/* Phone */}
+          <a href={`tel:${phone1}`} className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
+            <FaPhone className="text-green-700" />
+            <div>
+              <p className="font-bold">Call Us</p>
+              <p>{phone1 }</p>
+              <p>{phone2 }</p>
+            </div>
+          </a>
 
-            <p className="flex gap-3 mb-4">
-              <FaPhone />
-              +251 913 469 555
-            </p>
+          {/* WhatsApp */}
+          <a href={whatsappLink} target="_blank" className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
+            <FaWhatsapp className="text-green-700" />
+            <div>
+              <p className="font-bold">WhatsApp</p>
+              <p>Chat with us instantly</p>
+            </div>
+          </a>
 
-            <p className="flex gap-3 mb-4">
-              <FaPhone />
-              +251 913 480 555
-            </p>
+          {/* Location */}
+          <a href={mapLink} target="_blank" className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
+            <FaMapMarkerAlt className="text-green-700" />
+            <div>
+              <p className="font-bold">Location</p>
+              <p>Bishoftu, Ethiopia</p>
+            </div>
+          </a>
 
-         <p className="flex gap-3 mb-4">
-  <FaMapMarkerAlt />
-  Bishoftu, Ethiopia
-</p>
+          {/* TikTok */}
+          <a href={tiktokLink} target="_blank" className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
+            <FaTiktok className="text-green-700" />
+            <div>
+              <p className="font-bold">TikTok</p>
+              <p>@abiy2424241</p>
+            </div>
+          </a>
 
-          </div>
+          {/* Email */}
+          <a href={`mailto:${email}`} className="bg-white text-black p-5 rounded-xl flex items-center gap-4 md:col-span-2">
+            <FaEnvelope className="text-green-700" />
+            <div>
+              <p className="font-bold">Email</p>
+              <p>{email}</p>
+            </div>
+          </a>
+
+        </div>
+         
 
           <iframe
             title="Google Map"
@@ -47,8 +84,7 @@ function Contact() {
 >
   📍 Get Directions
 </a>
-        </div>
-
+        
       </div>
 
     </section>
