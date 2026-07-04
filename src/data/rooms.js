@@ -1,4 +1,4 @@
-import room1 from "../assets/images/room1.jpg";
+
 import room2 from "../assets/images/room2.jpg";
 import room3 from "../assets/images/room3.jpg";
 
@@ -6,7 +6,7 @@ const rooms = [
   {
     id: 1,
     name: "Standard Room",
-    image: room1,
+    image: room2,
     price: "Contact for Price",
     description:
       "Comfortable standard room with essential facilities for a peaceful stay.",

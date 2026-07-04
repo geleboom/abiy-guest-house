@@ -1,93 +1,184 @@
-import { FaPhone, FaMapMarkerAlt, FaWhatsapp, FaTiktok, FaEnvelope } from "react-icons/fa";
+import {
+  FaPhone,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+  FaTiktok,
+  FaEnvelope,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Contact() {
-
   const phone1 = "+251913469555";
   const phone2 = "+251913480555";
 
   const whatsappLink = "https://wa.me/251913480555";
   const tiktokLink = "https://www.tiktok.com/@abiy2424241";
   const mapLink = "https://maps.app.goo.gl/2q9fRirAGKdxcgW49?g_st=atm";
-  const email = "info@abiyguesthouse.com";
+  const email = "abiyzed11@gmail.com";
 
   return (
-    <section id="contact" className="py-24 bg-green-700 text-white">
+    <motion.section
+      id="contact"
+      className="py-24 bg-green-700 text-white"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-6xl mx-auto px-6">
 
-      <div className="max-w-6xl mx-auto px-6 text-center">
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-extrabold">
+            Get in Touch
+          </h2>
 
-        <h2 className="text-4xl font-bold mb-10">
-          Get in Touch
-        </h2>
+          <p className="text-green-100 mt-4 text-lg">
+            We'd love to hear from you. Contact us anytime for reservations or
+            inquiries.
+          </p>
+        </div>
 
-        {/* Contact Buttons */}
-        <div className="grid md:grid-cols-2 gap-6 text-left">
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-2 gap-6">
 
           {/* Phone */}
-          <a href={`tel:${phone1}`} className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
-            <FaPhone className="text-green-700" />
+          <a
+            href={`tel:${phone1}`}
+            className="bg-white text-black rounded-2xl p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+          >
+            <FaPhone className="text-4xl text-green-700 transition hover:rotate-12 hover:scale-125" />
+
             <div>
-              <p className="font-bold">Call Us</p>
-              <p>{phone1 }</p>
-              <p>{phone2 }</p>
+              <h3 className="font-bold text-xl">Call Us</h3>
+              <p>{phone1}</p>
+              <p>{phone2}</p>
             </div>
           </a>
 
           {/* WhatsApp */}
-          <a href={whatsappLink} target="_blank" className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
-            <FaWhatsapp className="text-green-700" />
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black rounded-2xl p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+          >
+            <FaWhatsapp className="text-4xl text-green-600 transition hover:rotate-12 hover:scale-125" />
+
             <div>
-              <p className="font-bold">WhatsApp</p>
+              <h3 className="font-bold text-xl">WhatsApp</h3>
               <p>Chat with us instantly</p>
             </div>
           </a>
 
           {/* Location */}
-          <a href={mapLink} target="_blank" className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
-            <FaMapMarkerAlt className="text-green-700" />
+          <a
+            href={mapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black rounded-2xl p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+          >
+            <FaMapMarkerAlt className="text-4xl text-red-500 transition hover:rotate-12 hover:scale-125" />
+
             <div>
-              <p className="font-bold">Location</p>
+              <h3 className="font-bold text-xl">Location</h3>
               <p>Bishoftu, Ethiopia</p>
             </div>
           </a>
 
           {/* TikTok */}
-          <a href={tiktokLink} target="_blank" className="bg-white text-black p-5 rounded-xl flex items-center gap-4">
-            <FaTiktok className="text-green-700" />
+          <a
+            href={tiktokLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-black rounded-2xl p-6 flex items-center gap-5 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300"
+          >
+            <FaTiktok className="text-4xl transition hover:rotate-12 hover:scale-125" />
+
             <div>
-              <p className="font-bold">TikTok</p>
+              <h3 className="font-bold text-xl">TikTok</h3>
               <p>@abiy2424241</p>
             </div>
           </a>
 
           {/* Email */}
-          <a href={`mailto:${email}`} className="bg-white text-black p-5 rounded-xl flex items-center gap-4 md:col-span-2">
-            <FaEnvelope className="text-green-700" />
+          <a
+            href={`mailto:${email}`}
+            className="bg-white text-black rounded-2xl p-6 flex items-center gap-5 md:col-span-2 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300"
+          >
+            <FaEnvelope className="text-4xl text-blue-600 transition hover:rotate-12 hover:scale-125" />
+
             <div>
-              <p className="font-bold">Email</p>
+              <h3 className="font-bold text-xl">Email</h3>
               <p>{email}</p>
             </div>
           </a>
 
         </div>
-         
 
+        {/* Quick Action Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-12">
+
+          <a
+            href={`tel:${phone1}`}
+            className="bg-yellow-500 hover:bg-yellow-600 hover:scale-105 transition-all px-6 py-3 rounded-full font-semibold text-black"
+          >
+            📞 Call Now
+          </a>
+
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 hover:bg-green-600 hover:scale-105 transition-all px-6 py-3 rounded-full font-semibold"
+          >
+            💬 WhatsApp
+          </a>
+
+          <a
+            href={mapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-600 hover:scale-105 transition-all px-6 py-3 rounded-full font-semibold"
+          >
+            📍 Directions
+          </a>
+
+          <a
+            href={tiktokLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black hover:bg-gray-800 hover:scale-105 transition-all px-6 py-3 rounded-full font-semibold"
+          >
+            🎵 TikTok
+          </a>
+
+        </div>
+
+        {/* Google Map */}
+        <div className="mt-14">
           <iframe
-            title="Google Map"
-            className="rounded-xl w-full h-72"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9708089381797!2d39.00317189999999!3d8.788812499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b0d00580056a1%3A0xaba701b86c49e2a7!2sAbiy%20Guest%20House!5e0!3m2!1sen!2set!4v1783117465537!5m2!1sen!2set"
+            title="ABIY Guest House Location"
+            className="w-full h-80 rounded-2xl shadow-2xl"
+            loading="lazy"
+            allowFullScreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9708089381797!2d39.00317189999999!3d8.788812499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b0d00580056a1%3A0xaba701b86c49e2a7!2sAbiy%20Guest%20House!5e0!3m2!1sen!2set!4v1783117465537!5m2!1sen!2set"
           ></iframe>
-<a
-  href="https://maps.app.goo.gl/2q9fRirAGKdxcgW49?g_st=atm"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block mt-6 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full transition"
->
-  📍 Get Directions
-</a>
-        
-      </div>
 
-    </section>
+          <div className="text-center">
+            <a
+              href={mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-8 bg-yellow-500 hover:bg-yellow-600 hover:scale-110 active:scale-95 transition-all duration-300 text-black font-bold px-8 py-4 rounded-full shadow-xl"
+            >
+              📍 Get Directions
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </motion.section>
   );
 }
 

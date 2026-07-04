@@ -8,7 +8,7 @@ import TikTok from "../components/TikTok";
 import DownloadApp from "../components/DownloadApp";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-
+import Reviews from "../components/Reviews";
 function Home() {
   return (
     <>
@@ -18,6 +18,7 @@ function Home() {
       <WhyChooseUs />
       <Rooms />
       <Gallery />
+      <Reviews />
       <TikTok />
       <DownloadApp />
       <Contact />

@@ -22,6 +22,8 @@ function Navbar() {
     "Gallery",
     "Videos",
     "Contact",
+    "Reviews",
+    
   ];
 
   return (

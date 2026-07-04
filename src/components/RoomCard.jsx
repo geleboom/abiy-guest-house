@@ -50,9 +50,12 @@ function RoomCard({ room }) {
             {room.price}
           </span>
 
-          <button className="bg-yellow-500 px-5 py-2 rounded-full font-semibold hover:bg-yellow-600">
-            Coming Soon
-          </button>
+         <a
+  href="#contact"
+  className="bg-green-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-800 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+>
+  📞 Reserve Now
+</a>
 
         </div>
 
