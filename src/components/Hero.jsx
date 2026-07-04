@@ -2,6 +2,7 @@ import heroImage from "../assets/images/hero.jpg";
 import guestHouse from "../data/guestHouse";
 import Button from "./Button";
 import logo from "../assets/logo/logo.png";
+import toast from "react-hot-toast";
 function Hero() {
   return (
     <section
@@ -35,10 +36,20 @@ function Hero() {
         </p>
 
         <div className="mt-10 flex justify-center gap-5 flex-wrap">
+<a href="#rooms">
+  <Button text="Explore Rooms" />
+</a>
 
-          <Button text="Explore Rooms" />
-
-          <Button text="Download App" type="secondary" />
+<Button
+  text="Download App"
+  type="secondary"
+  onClick={() =>
+    toast.success(
+      "📱 ABIY Guest House mobile app is coming soon!"
+    )
+  }
+/>
+          
 
         </div>
 
