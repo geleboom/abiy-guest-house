@@ -13,7 +13,7 @@ function Contact() {
 
   const whatsappLink = "https://wa.me/251913480555";
   const tiktokLink = "https://www.tiktok.com/@abiy2424241";
-  const mapLink = "https://maps.app.goo.gl/PbkKkLYBDG5WjJFx5";
+  const mapLink = "https://goo.gl/maps/WhznQYHyFse31jiJ8?g_st=atm";
   const email = "abiyzed11@gmail.com";
 
   return (
