@@ -13,7 +13,7 @@ function Contact() {
 
   const whatsappLink = "https://wa.me/251913480555";
   const tiktokLink = "https://www.tiktok.com/@abiy2424241";
-  const mapLink = "https://maps.app.goo.gl/2q9fRirAGKdxcgW49?g_st=atm";
+  const mapLink = "https://maps.app.goo.gl/PbkKkLYBDG5WjJFx5";
   const email = "abiyzed11@gmail.com";
 
   return (
@@ -162,7 +162,7 @@ function Contact() {
             className="w-full h-80 rounded-2xl shadow-2xl"
             loading="lazy"
             allowFullScreen
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9708089381797!2d39.00317189999999!3d8.788812499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b0d00580056a1%3A0xaba701b86c49e2a7!2sAbiy%20Guest%20House!5e0!3m2!1sen!2set!4v1783117465537!5m2!1sen!2set"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3942.973474264089!2d39.00055907501615!3d8.788561991263496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDcnMTguOCJOIDM5wrAwMCcxMS4zIkU!5e0!3m2!1sen!2set!4v1783353818072!5m2!1sen!2set"
           ></iframe>
 
           <div className="text-center">
